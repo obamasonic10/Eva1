@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
+  nombre : string;
 
-  constructor() { }
+  constructor() {
+    this.nombre = "victor.ve"; 
+  }
 
   ngOnInit() {
   }
