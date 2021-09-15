@@ -32,7 +32,7 @@ async ingresar(nom: HTMLInputElement, cla: HTMLInputElement)
   {
   let no = String(nom.value)
   let cl = Number(cla.value)
-  if (nom.value == "vi.verdugob" && cla.value == "1234"){
+  if (nom.value == "victor.ve" && cla.value == "1234"){
     const alertElement = await this.alertController.create({ 
       header  : "Usuario Reconocido",
       message : "Bienvenido Victor Verdugo Buzeta",
@@ -53,7 +53,7 @@ async ingresar(nom: HTMLInputElement, cla: HTMLInputElement)
   {
   let no = String(nom.value)
   let cl = Number(cla.value)
-  if (cla.value != "1234" || nom.value != "vi.verdugob"){
+  if (cla.value != "1234" || nom.value != "victor.ve"){
     const alertElement = await this.alertController.create({ 
       header  : "Las credenciales no coinciden",
       message : "¿Necesita ayuda para recuperar su cuenta?",
