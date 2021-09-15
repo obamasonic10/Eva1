@@ -41,8 +41,32 @@ async ingresar(nom: HTMLInputElement, cla: HTMLInputElement)
         handler: () => {
           this.router.navigateByUrl("/menu");
         }}]
+    }
+    )
+    await alertElement.present();
+
+  }}
+
+  
+
+  async recuperar(nom: HTMLInputElement, cla: HTMLInputElement)
+  {
+  let no = String(nom.value)
+  let cl = Number(cla.value)
+  if (cla.value != "1234" || nom.value != "vi.verdugob"){
+    const alertElement = await this.alertController.create({ 
+      header  : "Las credenciales no coinciden",
+      message : "¿Necesita ayuda para recuperar su cuenta?",
+      buttons : [
+        {
+          text: "No",
+          role: "cancel"
+        },
+        {text  : "Sí, por favor",
+        handler: () => {
+          this.router.navigateByUrl("/recuperar");
+        }}]
     })
     await alertElement.present();
   }}
-      
 }

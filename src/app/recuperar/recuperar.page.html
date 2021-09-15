@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary">
+    <h1>Recuperar Contraseña</h1>
+  </ion-text>
+
+  <ion-item>
+    <ion-label>Correo Electrónico</ion-label>
+    <ion-input minlength="8" placeholder="Ej: ayudame@gmail.com" #correo></ion-input>
+  </ion-item>
+
+  <ion-button (click)="recuperar(correo)" expand="block" shape="round">
+    Enviar
+  </ion-button>
+
+
+</ion-content>

@@ -19,7 +19,7 @@
     <ion-input placeholder="*****" type="password" #clave></ion-input>
   </ion-item>
 
-  <ion-button (click)="ingresar(nombre, clave)" expand="block" shape="round">
+  <ion-button (click)="ingresar(nombre, clave)" (click)="recuperar(nombre, clave)" expand="block" shape="round">
     Ingresar
   </ion-button>
 
