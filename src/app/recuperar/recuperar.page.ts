@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./recuperar.page.scss'],
 })
 export class RecuperarPage implements OnInit {
+  correo: string;
 
   constructor(
     private activatedRouter : ActivatedRoute,
@@ -21,11 +22,13 @@ export class RecuperarPage implements OnInit {
   }
 //metodos
 
-async recuperar()
+async recuperar(cor: HTMLInputElement)
 {
+  let co = String(cor.value)
+  if (cor.value == "victor.ve@gmail.com"){
     const alertElement = await this.alertController.create({ 
       header  : "Solicitud Ingresada",
-      message : "Su nombre de usuario y nueva contraseña han sido enviadas al correo registrado",
+      message : "Su contraseña ha sido enviada al correo registrado",
       buttons : [
         {text  : "Volver al inicio",
         handler: () => {
@@ -34,4 +37,17 @@ async recuperar()
     })
     await alertElement.present();
   }
+  else{
+    const alertElement = await this.alertController.create({ 
+    header  : "ERROR",
+    message : "El correo ingresado no es válido",
+    buttons : [
+      {text  : "Intentelo nuevamente",
+      handler: () => {
+        this.router.navigateByUrl("/recuperar");
+      }}]
+  })
+  await alertElement.present();
+}}
+
 }
